@@ -1,0 +1,29 @@
+{
+  "name": "wayfinderapi",
+  "version": "0.1.0",
+  "description": "A API for pathfinder 1e related stuffs, to be consumed by the project wayfinder",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "Pathfinder",
+    "Express",
+    "Nodemon",
+    "Node.js"
+  ],
+  "author": "LPSJ",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-trybe-backend": "1.0.1",
+    "nodemon": "2.0.15"
+  }
+}

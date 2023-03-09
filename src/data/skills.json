@@ -1,0 +1,90 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "acrobatics",
+    "abilityMod": "dex",
+    "armorCheckPenalty": true,
+    "trainedOnly": false,
+    "description": "You can keep your balance while traversing narrow or treacherous surfaces"
+  },
+  {
+    "skillId": 2,
+    "skillName": "appraise",
+    "abilityMod": "int",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You can evaluate the monetary value of an object"
+  },
+  {
+    "skillId": 3,
+    "skillName": "bluff",
+    "abilityMod": "cha",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You know how to tell a lie"
+  },
+  {
+    "skillId": 4,
+    "skillName": "climb",
+    "abilityMod": "str",
+    "armorCheckPenalty": true,
+    "trainedOnly": false,
+    "description": "You are skilled scaling vertical surfaces, from smooth city walls to rocky cliffs"
+  },
+  {
+    "skillId": 5,
+    "skillName": "craft",
+    "abilityMod": "int",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You are skilled in the creation of a specific group of items, such as armor or weapons"
+  },
+  {
+    "skillId": 7,
+    "skillName": "diplomacy",
+    "abilityMod": "cha",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You can use this skill to persuade others to agree with your arguments, to resolve differences, and to gather valuable information or rumors from people."
+  },
+  {
+    "skillId": 8,
+    "skillName": "disableDevice",
+    "abilityMod": "dex",
+    "armorCheckPenalty": true,
+    "trainedOnly": true
+,    "description": "You are skilled at disarming traps and opening locks."
+  },
+  {
+    "skillId": 9,
+    "skillName": "disguise",
+    "abilityMod": "cha",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You are skilled at changing your appearance."
+  },
+  {
+    "skillId": 10,
+    "skillName": "escapeArtist",
+    "abilityMod": "dex",
+    "armorCheckPenalty": true,
+    "trainedOnly": false,
+    "description": "You training allows you to slip out of bonds and escape from grapples."
+  },
+  {
+    "skillId": 11,
+    "skillName": "fly",
+    "abilityMod": "dex",
+    "armorCheckPenalty": true,
+    "trainedOnly": false,
+    "description": "You are skilled at flying, through either the use of wings or magic, and can perform daring or complex maneuvers while airborne."
+  },
+  {
+    "skillId": 12,
+    "skillName": "handleAnimal",
+    "abilityMod": "cha",
+    "armorCheckPenalty": false,
+    "trainedOnly": true
+,    "description": "You are trained at working with animals, and can teach them tricks, get them to follow your simples commands, or even domesticate them."
+  }
+]
