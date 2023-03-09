@@ -55,15 +55,9 @@ app.post('/skills', (req, res) => {
 app.put('/skills/:id', (req, res) => {
   const { id } = req.params;
   const {
-    abilityBonus,
-    abilityMod,
     armorCheckPenalty,
-    classSkill,
     description,
-    miscMod,
-    ranks,
     skillname,
-    skillTotal,
     trainedOnly,
   } = req.body;
 
@@ -73,15 +67,9 @@ app.put('/skills/:id', (req, res) => {
     res.status(NOT_FOUND).json({ message: 'Skill not found!' });
   }
 
-  skillToUpdate.abilityBonus = abilityBonus;
-  skillToUpdate.abilityMod = abilityMod;
   skillToUpdate.armorCheckPenalty = armorCheckPenalty;
-  skillToUpdate.classSkill = classSkill;
   skillToUpdate.description = description;
-  skillToUpdate.miscMod = miscMod;
-  skillToUpdate.ranks = ranks;
   skillToUpdate.skillname = skillname;
-  skillToUpdate.skillTotal = skillTotal;
   skillToUpdate.trainedOnly = trainedOnly;
   res.status(OK).json(skillToUpdate);
 });
