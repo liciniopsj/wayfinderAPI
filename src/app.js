@@ -1,14 +1,20 @@
 const express = require('express');
+require('express-async-errors');
+const morgan = require('morgan');
+const skills = require('./data/skills.json');
+const apiCredentials = require('./middlewares/apiCredentials');
+const validateId = require('./middlewares/validateId');
+const validateProps = require('./middlewares/validateProps');
 
 const OK = 200;
 const CREATED = 201;
-const NOT_FOUND = 404;
-
-const skills = require('./data/skills.json');
 
 const app = express();
-
+app.use(morgan('dev'));
+app.use(express.static('public'));
 app.use(express.json());
+
+let nextId = 13;
 
 // GET skill name by Query
 
@@ -29,59 +35,44 @@ app.get('/skills', (_req, res) => res.status(OK).json(skills));
 
 // GET by Id
 
-app.get('/skills/:id', (req, res) => {
+app.get('/skills/:id', validateId, (req, res) => {
   const { id } = req.params;
-  const filteredSkills = skills.find(({ skillId }) => skillId === +id);
-
-  if (!filteredSkills) {
-    res.status(NOT_FOUND).json({ message: 'Skill not found!' });
-  }
-  
+  const filteredSkills = skills.find(({ skillId }) => skillId === +id);  
   res.status(OK).json(filteredSkills);
 });
 
+app.use(apiCredentials);
+
 // Post new Skill
 
-app.post('/skills', (req, res) => {
-  const newSkill = { ...req.body };
+app.post('/skills', validateProps, (req, res) => {
+  if (req.skills.clearLevel > 1) return res.status(403).json({ message: 'Low Clearance Level' });
+  const newSkill = { skillId: nextId, ...req.body };
   skills.push(newSkill);
-
+  nextId += 1;
   res.status(CREATED).json(skills);
 });
 
 // PUT Editing skills via ID
 
-// eslint-disable-next-line max-lines-per-function
-app.put('/skills/:id', (req, res) => {
+app.put('/skills/:id', validateId, validateProps, (req, res) => {
   const { id } = req.params;
-  const {
-    armorCheckPenalty,
-    description,
-    skillname,
-    trainedOnly,
-  } = req.body;
-
   const skillToUpdate = skills.find(({ skillId }) => skillId === +id);
-
-  if (!skillToUpdate) {
-    res.status(NOT_FOUND).json({ message: 'Skill not found!' });
-  }
-
-  skillToUpdate.armorCheckPenalty = armorCheckPenalty;
-  skillToUpdate.description = description;
-  skillToUpdate.skillname = skillname;
-  skillToUpdate.trainedOnly = trainedOnly;
-  res.status(OK).json(skillToUpdate);
+  const index = skills.indexOf(skillToUpdate);
+  const updatedSkill = { skillId: +id, ...req.body };
+  skills.splice(index, 1, updatedSkill);
+  res.status(201).json(updatedSkill);
 });
 
 // DELETE delete skills
 
-app.delete('/skills/:id', (req, res) => {
+app.delete('/skills/:id', validateId, (req, res) => {
+  if (req.skills.clearLevel > 0) return res.status(403).json({ message: 'Low Clearance Level' });
   const { id } = req.params;
-  const skillIndex = skills.findIndex(({ skillId }) => skillId === +id);
-  skills.splice(skillIndex, 1);
-
-  res.status(OK).end();
+  const skillToDelete = skills.findIndex((skill) => skill.skillId === +id);
+  const deletedSkill = skills[skillToDelete].skillName;
+  skills.splice(skillToDelete, 1);
+  res.status(200).json({ message: `${deletedSkill} skill deleted` });
 });
 
 module.exports = app;

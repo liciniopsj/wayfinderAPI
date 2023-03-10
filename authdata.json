@@ -1,0 +1,5 @@
+{
+  "root": { "clearLevel": 0, "description": "This user can use all methods" },
+  "superUser": { "clearLevel": 1, "description": "This user can use POST and PUT methods" },
+  "editor": { "clearLevel": 2, "description": "This user can only use the PUT method" }
+}
