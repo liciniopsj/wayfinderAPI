@@ -5,7 +5,7 @@
     "abilityMod": "dex",
     "armorCheckPenalty": true,
     "trainedOnly": false,
-    "description": "You can keep your balance while traversing narrow or treacherous surfaces"
+    "description": "You can keep your balance while traversing narrow or treacherous surfaces."
   },
   {
     "skillId": 2,
@@ -13,7 +13,7 @@
     "abilityMod": "int",
     "armorCheckPenalty": false,
     "trainedOnly": false,
-    "description": "You can evaluate the monetary value of an object"
+    "description": "You can evaluate the monetary value of an object."
   },
   {
     "skillId": 3,
@@ -21,7 +21,7 @@
     "abilityMod": "cha",
     "armorCheckPenalty": false,
     "trainedOnly": false,
-    "description": "You know how to tell a lie"
+    "description": "You know how to tell a lie."
   },
   {
     "skillId": 4,
@@ -29,7 +29,7 @@
     "abilityMod": "str",
     "armorCheckPenalty": true,
     "trainedOnly": false,
-    "description": "You are skilled scaling vertical surfaces, from smooth city walls to rocky cliffs"
+    "description": "You are skilled scaling vertical surfaces, from smooth city walls to rocky cliffs."
   },
   {
     "skillId": 5,
@@ -37,7 +37,7 @@
     "abilityMod": "int",
     "armorCheckPenalty": false,
     "trainedOnly": false,
-    "description": "You are skilled in the creation of a specific group of items, such as armor or weapons"
+    "description": "You are skilled in the creation of a specific group of items, such as armor or weapons."
   },
   {
     "skillId": 7,
@@ -84,7 +84,127 @@
     "skillName": "handleAnimal",
     "abilityMod": "cha",
     "armorCheckPenalty": false,
-    "trainedOnly": true
-,    "description": "You are trained at working with animals, and can teach them tricks, get them to follow your simples commands, or even domesticate them."
+    "trainedOnly": true,
+    "description": "You are trained at working with animals, and can teach them tricks, get them to follow your simples commands, or even domesticate them."
+  },
+  {
+    "skillId": 13,
+    "skillName": "heal",
+    "abilityMod": "wis",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You are skilled at tending to wounds and ailments."
+  },
+  {
+    "skillId": 14,
+    "skillName": "intimidate",
+    "abilityMod": "cha",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You can use this skill to frighten an opponent or to get them to act in a way that benefits you."
+  },
+  {
+    "skillId": 15,
+    "skillName": "knowledge",
+    "abilityMod": "int",
+    "armorCheckPenalty": false,
+    "trainedOnly": true,
+    "description": "You are educated in a field of study and can answer both simple and complex questions."
+  },
+  {
+    "skillId": 16,
+    "skillName": "linguistics",
+    "abilityMod": "int",
+    "armorCheckPenalty": false,
+    "trainedOnly": true,
+    "description": "You are skilled at working with language, in both its spoken and written forms."
+  },
+  {
+    "skillId": 17,
+    "skillName": "perception",
+    "abilityMod": "wis",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "Your senses allow you to notice fine details and alert you to danger."
+  },
+  {
+    "skillId": 18,
+    "skillName": "perform",
+    "abilityMod": "cha",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You are skilled at one form of entertainment, from singing to acting to playing an instrument."
+  },
+  {
+    "skillId": 19,
+    "skillName": "profession",
+    "abilityMod": "wis",
+    "armorCheckPenalty": false,
+    "trainedOnly": true,
+    "description": "You are skilled at a specific job."
+  },
+  {
+    "skillId": 20,
+    "skillName": "ride",
+    "abilityMod": "dex",
+    "armorCheckPenalty": true,
+    "trainedOnly": false,
+    "description": "You are skilled at riding mounts, usually a horse, but possibly something more exotic, like a griffon or pegasus."
+  },
+  {
+    "skillId": 21,
+    "skillName": "senseMotive",
+    "abilityMod": "wis",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You are skilled at detecting falsehoods and true intentions."
+  },
+  {
+    "skillId": 22,
+    "skillName": "sleightOfHand",
+    "abilityMod": "dex",
+    "armorCheckPenalty": true,
+    "trainedOnly": true,
+    "description": "You training allows you to pick pockets, draw hidden weapons, and take a variety of actions without being noticed."
+  },
+  {
+    "skillId": 23,
+    "skillName": "spellcraft",
+    "abilityMod": "int",
+    "armorCheckPenalty": false,
+    "trainedOnly": true,
+    "description": "You are skilled at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast."
+  },
+  {
+    "skillId": 24,
+    "skillName": "stealth",
+    "abilityMod": "dex",
+    "armorCheckPenalty": true,
+    "trainedOnly": false,
+    "description": "You are skilled at avoiding detectiong, allowing you to slip past foes or strike from an unseen position."
+  },
+  {
+    "skillId": 25,
+    "skillName": "survival",
+    "abilityMod": "wis",
+    "armorCheckPenalty": false,
+    "trainedOnly": false,
+    "description": "You are skilled at surviving in the wild and at navigating in the wilderness."
+  },
+  {
+    "skillId": 26,
+    "skillName": "swin",
+    "abilityMod": "str",
+    "armorCheckPenalty": true,
+    "trainedOnly": false,
+    "description": "You know hot to swin and can do so even in stormy water"
+  },
+  {
+    "skillId": 27,
+    "skillName": "useMagicDevice",
+    "abilityMod": "cha",
+    "armorCheckPenalty": false,
+    "trainedOnly": true,
+    "description": "You are skilled at activating magic items, even if you are not otherwise trained in their use."
   }
 ]
