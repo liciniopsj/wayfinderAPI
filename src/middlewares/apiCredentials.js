@@ -1,3 +1,4 @@
+// This is only an exercise, NOT REALLY SECURE
 const fs = require('fs/promises');
 
 module.exports = async function apiCredentials(req, res, next) {
