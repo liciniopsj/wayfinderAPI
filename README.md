@@ -25,3 +25,5 @@ DELETE METHOD
 * /skills/:id -  deletes a skill that has a matching skillId
 
 Changes in this api does not persist.
+
+This is my first API using what i learned at the time. I Will no longer work on this project and will now focus on building a version 2 with more features and with what i learned soo far.
