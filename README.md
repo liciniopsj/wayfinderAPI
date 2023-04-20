@@ -1,5 +1,7 @@
 # wayfinderAPI
 
+** Obsolete **
+
 An Exercise on REST API creation using express. The API Lists skills from a TTRPG called pathfinder 1e.
 
 This API listens to the port: 3001
